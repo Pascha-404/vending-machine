@@ -1,0 +1,34 @@
+.Redbull{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Redbull-data{
+    padding: 2rem 3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 10px; 
+    font-size: 1.5rem;
+}
+
+.Redbull-data a{
+    border: 1px solid #fff;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.Redbull img{
+    max-width: 30rem;
+    animation: shake 2000ms infinite;
+}
+
+@keyframes shake {
+  0% { transform: translateY(0%) rotate(0deg); }
+  25% { transform: translateY(15%); }
+  50% { transform: translateY(-20%) rotate(360deg) scale(2); }
+  75% { transform: translateY(15%); }
+  100% { transform: translateY(0%) rotate(0deg); }
+}
