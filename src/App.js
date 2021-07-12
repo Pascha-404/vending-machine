@@ -1,33 +1,21 @@
-import { Route, NavLink, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import VendingMachine from './VendingMachine';
 import Redbull from './Redbull';
 import Fruits from './Fruits';
 import Cheetos from './Cheetos';
+import Navbar from "./Navbar"
 
 function App() {
-  return (
+	return (
 		<div className='App'>
-			<nav className='App-nav'>
-				<NavLink activeClassName="nav-active" exact to='/'>Vendingmachine</NavLink>
-				<NavLink activeClassName="nav-active" exact to='/redbull'>Redbull</NavLink>
-				<NavLink activeClassName="nav-active" exact to='/fruits'>Fruits</NavLink>
-				<NavLink activeClassName="nav-active" exact to='/cheetos'>Cheetos</NavLink>
-			</nav>
+			<Navbar />
 
 			<Switch>
-				<Route exact path='/'>
-					<VendingMachine />
-				</Route>
-				<Route exact path='/redbull'>
-					<Redbull />
-				</Route>
-				<Route exact path='/fruits'>
-					<Fruits />
-				</Route>
-				<Route exact path='/cheetos'>
-					<Cheetos />
-				</Route>
+				<Route exact path='/' render={() => <VendingMachine />}></Route>
+				<Route exact path='/redbull' render={() => <Redbull />}></Route>
+				<Route exact path='/fruits' render={() => <Fruits />}></Route>
+				<Route exact path='/cheetos' render={() => <Cheetos />}></Route>
 			</Switch>
 		</div>
 	);
