@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Cheetos.css';
 import CheetoBag from './CheetoBag';
+import TextBox from './TextBox';
 
 class Cheetos extends Component {
 	constructor(props) {
@@ -32,12 +33,14 @@ class Cheetos extends Component {
 		));
 		return (
 			<div className='Cheetos'>
-				<div className='Cheetos-data'>
-					<h2>GIMME CHEETOS!!!</h2>
-					<button onClick={this.handleClick}>NOM NOM NOM</button>
-					<p>BAGS EATEN: {this.state.bags.length}</p>
-					<Link to='/'>GO BACK</Link>
-				</div>
+				<TextBox dark>
+					<div className='Cheetos-data'>
+						<h2>GIMME CHEETOS!!!</h2>
+						<button onClick={this.handleClick}>NOM NOM NOM</button>
+						<p>BAGS EATEN: {this.state.bags.length}</p>
+						<Link to='/'>GO BACK</Link>
+					</div>
+				</TextBox>
 				{renderBags}
 			</div>
 		);

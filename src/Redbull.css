@@ -6,14 +6,6 @@
     align-items: center;
 }
 
-.Redbull-data{
-    padding: 2rem 3rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    border-radius: 10px; 
-    font-size: 1.5rem;
-}
-
 .Redbull-data a{
     border: 1px solid #fff;
     padding: 0.5rem;

@@ -9,13 +9,6 @@
 	overflow: hidden;
 }
 
-.Cheetos-data {
-	background-color: rgba(0, 0, 0, 0.8);
-	color: #fff;
-	padding: 1rem 3rem;
-	border-radius: 10px;
-}
-
 .Cheetos button {
 	background-color: transparent;
 	padding: 1rem 1.5rem;
