@@ -1,0 +1,5 @@
+.CheetoBag {
+	position: absolute;
+	max-width: 20rem;
+	z-index: -1;
+}
