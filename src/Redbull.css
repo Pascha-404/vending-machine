@@ -22,7 +22,7 @@
 
 .Redbull img{
     max-width: 30rem;
-    animation: shake 2000ms infinite;
+    animation: shake 2000ms 1;
 }
 
 @keyframes shake {
