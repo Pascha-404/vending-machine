@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Cheetos.css';
+import CheetoBag from './CheetoBag';
 
 class Cheetos extends Component {
 	constructor(props) {
@@ -11,19 +12,21 @@ class Cheetos extends Component {
 
 	handleClick(evt) {
 		const randRotation = Math.floor(Math.random() * 360);
-		const randX = Math.floor(Math.random() * 150);
-		const randY = Math.floor(Math.random() * 150);
-		const newBag = { rotation: randRotation, x: randX, y: randY }
+		const randX = window.innerWidth * Math.random();
+		const randY = window.innerHeight * Math.random();
+		const newBag = { rotation: randRotation, x: randX, y: randY };
 		this.setState(st => ({
-			bags: [...st.bags, newBag]
-		}))
+			bags: [...st.bags, newBag],
+		}));
 	}
 
 	render() {
 		const renderBags = this.state.bags.map((b, idx) => (
-			<img
+			<CheetoBag
 				src='https://purepng.com/public/uploads/large/flaming-hot-cheetos-o9v.png'
-				alt='Cheetos' style={{ transform: `rotate(${b.rotation}deg) translateX(${b.x}%) translateY(${b.y}%)` }}
+				rotation={b.rotation}
+				y={b.y}
+				x={b.x}
 				key={idx}
 			/>
 		));
